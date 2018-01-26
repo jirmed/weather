@@ -1,13 +1,15 @@
 'use_strict';
 
-var express = require('express');
-var app = express();
-var preload = require("openui5-preload");
+const express = require('express');
+const path = require('path');       
+const PORT = process.env.PORT || 5000;
+const preload = require("openui5-preload");
  
 
+var app = express();
 
-app.use('/resources', express.static('node_modules/openui5.runtime.downloader/lib/resources'));
-app.use('/', express.static('src/webapp'));
+app.use('/resources', express.static(path.join(__dirname,'node_modules/openui5.runtime.downloader/lib/resources')));
+app.use('/', express.static(path.join(__dirname,'src/webapp')));
 
 /*
 app.get('/weather', function (req, res) {
@@ -50,6 +52,9 @@ preload({
 });
 */
 
+/*
 app.listen(80, function () {
     console.log('OpenUI5 on NodeJS example app is listening on port 80!');
 });
+*/
+app.listen(PORT, () => console.log(`Listening on ${ PORT }`))
