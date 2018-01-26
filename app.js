@@ -8,6 +8,8 @@ var preload = require("openui5-preload");
 
 app.use('/resources', express.static('node_modules/openui5.runtime.downloader/lib/resources'));
 app.use('/', express.static('src/webapp'));
+
+/*
 app.get('/weather', function (req, res) {
    console.log('weather');
    var Client = require('node-rest-client').Client;
@@ -46,7 +48,7 @@ preload({
   verbose: true,
   components: {'**': {}}
 });
-
+*/
 
 app.listen(80, function () {
     console.log('OpenUI5 on NodeJS example app is listening on port 80!');

@@ -15,7 +15,7 @@
 		{
 			"weather": 
 			{
-				"uri": "../weather",
+				"uri": "weather",
 				"type": "JSON"
 			}
 		} 
