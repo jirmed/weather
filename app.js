@@ -48,6 +48,6 @@ preload({
 });
 
 
-app.listen(3000, function () {
-    console.log('OpenUI5 on NodeJS example app is listening on port 3000!');
+app.listen(80, function () {
+    console.log('OpenUI5 on NodeJS example app is listening on port 80!');
 });
